@@ -95,6 +95,7 @@ func CountNeighbors(board [][]int64, i int64, j int64) int64 {
 	count := int64(0)
 	for _, nb := range neighbors {
 		slog.Info("Neighbor", "nb", nb, "t", int64(len(board)) > i-1)
+
 		if nb[0] == -1 && i > 0 {
 			// count the previous row's neighbors
 			count = count + board[i+nb[0]][j+nb[1]]
